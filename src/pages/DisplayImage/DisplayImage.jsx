@@ -10,11 +10,15 @@ const DisplayImage = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const getListOfImages = async () => {
-      const res = await axiosInstance.get("/");
-      setListOfImages(res.data.imageList);
-      setLoading(false);
+      try {
+        const res = await axiosInstance.get("/");
+        setListOfImages(res.data.imageList);
+        setLoading(false);
+      } catch (err) {
+        console.log(err);
+        setLoading(false);
+      }
     };
-
     getListOfImages();
   }, []);
   return (

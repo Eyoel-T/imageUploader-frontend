@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://imageuploaderapi-rhim.onrender.com/api",
+  baseURL: "https://imageuploader-backend-production.up.railway.app/api",
 });
 
 export default axiosInstance;
