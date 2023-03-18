@@ -93,7 +93,7 @@ const Upload = () => {
     <>
       <NavBar />
       <div className="upload">
-        <h3>Upload You image</h3>
+        <h3>Upload Your image</h3>
         {errorMessage.status && <p>{errorMessage.message}</p>}
         <form action="" onSubmit={upload_image}>
           <input type="file" required onChange={checkFileType} ref={imageRef} />
